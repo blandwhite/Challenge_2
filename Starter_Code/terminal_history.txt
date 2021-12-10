@@ -1,0 +1,21 @@
+    1  history 10
+    2  cd desktop
+    3  git clone https://github.com/blandwhite/Challenge_2.git
+    4  ls
+    5  cd Challenge_2/
+    6  ls
+    7  conda activate dev
+    8  ls
+    9  ls Starter_Code/
+   10  ls
+   11  cd Starter_Code/
+   12  git status
+   13  git add
+   14  git add .
+   15  git status
+   16  git commit -m "This is the first commit from local with the new Starter Code files"
+   17  git status
+   18  git push
+   19  history
+   20  history >cd ..
+   21  history 50 > terminal_history.txt
