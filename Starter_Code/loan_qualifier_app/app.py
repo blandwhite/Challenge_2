@@ -101,6 +101,13 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     print(f"Found {len(bank_data_filtered)} qualifying loans")
 
+    # If there are no qualifying loans, allows user to retry with different answers or exit the app.
+    if len(bank_data_filtered) == 0:
+        retry = questionary.confirm("There are no qualifying loans. Would you like to try again with different answers? (y/n)").ask()
+        if not retry:
+            sys.exit("Thank you for utilizing our Loan Qualifier app! Have a great day!")
+        run()
+    print(bank_data_filtered)
     return bank_data_filtered
 
 
@@ -111,16 +118,19 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for saving the CSV Files.
+
+    # Allow user to opt out of saving the results and exits the app.
     confirm = questionary.confirm("Would you like to save your list of Qualifying Loans to a csv file? (y/n)").ask()
-    if confirm:
+    if not confirm:
+        sys.exit("Thank you for utilizing our Loan Qualifier app! Have a great day!")
+    
+    # Asks user for a path to which qualifying loans will be saved as a CSV.
+    csvpath = questionary.text("Enter a file path and file name (.csv):").ask()
+    csvpath = Path(csvpath)
 
+    # Calls the save_csv module from fileio.py with args for the new path and list of qualifying loans
+    return save_csv(csvpath,qualifying_loans)
 
-
-    csvpath = Path("my_output.csv") #these lines will end up going to fileio.py file
-    with open(csvpath, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-    for row in qualifying_loans:
-        csvwriter.writerow(row)
 
 
 def run():

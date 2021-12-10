@@ -29,5 +29,21 @@ def load_csv(csvpath):
             data.append(row)
     return data
 
-def save_csv(csvpath):
-    csvpath = 
+def save_csv(csvpath, qualifying_loans):
+    """Writes the CSV file to the path provided.
+
+    Args:
+        csvpath (Path): The csv file path.
+        qualifying_loans: the list of loans for which user qualified.
+        
+    """     
+    with open(csvpath, 'w', newline='') as saved_loans_file:
+        csvwriter = csv.writer(saved_loans_file)
+
+        # Add a header to the new CSV file
+        header = ['Lender','Max Loan Amount','Max LTV','Max DTI','Min Credit Score','Interest Rate']
+        csvwriter.writerow(header)
+        # Write the CSV data
+        for row in qualifying_loans:
+            csvwriter.writerow(row)
+    return saved_loans_file
