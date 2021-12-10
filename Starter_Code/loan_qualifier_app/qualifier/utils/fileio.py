@@ -28,3 +28,6 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+def save_csv(csvpath):
+    csvpath = 

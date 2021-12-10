@@ -1,6 +1,8 @@
 # Challenge_2
 Challenge #2 for the UNCC FinTech Bootcamp due by 11:59pm on 12/12/21
 
+---
+
 # What's being created
 We’ll apply software-engineering best practices to add new features and enhancements to the loan qualifier application. Specifically, we'll create a GitHub repository that includes all of the following files:
 
@@ -73,6 +75,9 @@ pip install questionary
 
 This section should include screenshots, code blocks, or animations explaining how to use your project.
 
+*This clip shows the results for the first part of the program in the CLI:*
+
+![Sample of first part of program execution](./images/01_results_of_execution_part_1.png)
 ---
 
 ## Contributors
