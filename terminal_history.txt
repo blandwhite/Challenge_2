@@ -1,0 +1,89 @@
+    1  history 10
+    2  cd desktop
+    3  git clone https://github.com/blandwhite/Challenge_2.git
+    4  ls
+    5  cd Challenge_2/
+    6  ls
+    7  conda activate dev
+    8  ls
+    9  ls Starter_Code/
+   10  ls
+   11  cd Starter_Code/
+   12  git status
+   13  git add
+   14  git add .
+   15  git status
+   16  git commit -m "This is the first commit from local with the new Starter Code files"
+   17  git status
+   18  git push
+   19  history
+   20  history >cd ..
+   21  history 50 > terminal_history.txt
+   22  ls
+   23  git status
+   24  rm cd
+   25  ls
+   26  git status
+   27  git add
+   28  git add . 
+   29  git status
+   30  git commit -m "Adding new terminal_history.txt file to repo"
+   31  git status
+   32  git add loan_qualifier_app/app.py 
+   33  git commit -m "Committing first updates to app.py to include skeleton of save_qualifying_loans function"
+   34  python app.py
+   35  ls
+   36  cd loan_qualifier_app/
+   37  python app.py
+   38  pwd
+   39  cd ..
+   40  cd ..
+   41  cd ..
+   42  cd Challenge_2
+   43  git status
+   44  cd Starter_Code/loan_qualifier_app/
+   45  ls
+   46  rm my_output.csv 
+   47  ls
+   48  git status
+   49  git add . 
+   50  git status
+   51  cd ../..
+   52  git add . 
+   53  git status
+   54  git commit -m "Includes moving save_csv function to the fileio to recall as a module. Also added confirm.ask to confirm if user wishes to save results to a csv file, or else exits the app."
+   55  git status
+   56  ls
+   57  cd Starter_Code/
+   58  ls
+   59  cd loan_qualifier_app/
+   60  python app.py
+   61  ls
+   62  cd ../..
+   63  git status
+   64  git add . 
+   65  git commit -m "Commit of code that works from beginning to end; final saved CSV file is Geoffs_loans.csv."
+   66  git push
+   67  git status
+   68  pwd
+   69  cd Starter_Code/loan_qualifier_app/
+   70  python app.py
+   71  python app.py
+   72  python app.py
+   73  python app.py
+   74  python app.py
+   75  cd ../..
+   76  ls
+   77  cd Starter_Code/
+   78  ls
+   79  cd loan_qualifier_app/
+   80  ls
+   81  rm Geoffs_loans2.csv 
+   82  ls
+   83  history 50 > terminal_history.txt
+   84  history 100 > terminal_history.txt
+   85  cd ..
+   86  ls
+   87  rm terminal_history.txt 
+   88  cd ..
+   89  history 100 > terminal_history.txt

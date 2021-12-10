@@ -46,4 +46,5 @@ def save_csv(csvpath, qualifying_loans):
         # Write the CSV data
         for row in qualifying_loans:
             csvwriter.writerow(row)
+    print("Your file has been saved!")
     return saved_loans_file

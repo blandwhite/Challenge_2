@@ -6,7 +6,7 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
-import csv
+# import csv - this was already in fileio.py; the save_csv function was moved there
 import sys
 import fire
 import questionary
@@ -103,11 +103,16 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     # If there are no qualifying loans, allows user to retry with different answers or exit the app.
     if len(bank_data_filtered) == 0:
-        retry = questionary.confirm("There are no qualifying loans. Would you like to try again with different answers? (y/n)").ask()
+        retry = questionary.confirm("There are no qualifying loans. Would you like to try again with different answers?").ask()
         if not retry:
             sys.exit("Thank you for utilizing our Loan Qualifier app! Have a great day!")
+        # was trying to loop back only to get new input, but not ask for data path again. failed
+        # credit_score, debt, income, loan_amount, home_value = get_applicant_info()
+
+        # if wants to retry then starts program fresh
         run()
-    print(bank_data_filtered)
+    # Print was used temporarily for debugging
+    # print(bank_data_filtered) 
     return bank_data_filtered
 
 
@@ -120,7 +125,7 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for saving the CSV Files.
 
     # Allow user to opt out of saving the results and exits the app.
-    confirm = questionary.confirm("Would you like to save your list of Qualifying Loans to a csv file? (y/n)").ask()
+    confirm = questionary.confirm("Would you like to save your list of Qualifying Loans to a csv file?").ask()
     if not confirm:
         sys.exit("Thank you for utilizing our Loan Qualifier app! Have a great day!")
     
