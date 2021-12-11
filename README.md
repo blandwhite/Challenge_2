@@ -72,13 +72,13 @@ pip install questionary
 
 *This clip shows the results for the first part of the program in the CLI:*
 
-![Sample of first part of program execution](./images/01_results_of_execution_part_1.png)
+![Sample of first part of program execution](https://github.com/blandwhite/Challenge_2/blob/main/images/01_results_of_execution_part_1.PNG)
 
 
 
 *After the addition of a new save_csv function, the user now has the ability to save a list of qualifying loans, such as this:*
 
-![Saved loans](./images/02_saved_loans.png)
+![Saved loans](https://github.com/blandwhite/Challenge_2/blob/main/images/02_saved_loans.png)
 ---
 
 ## Contributors
