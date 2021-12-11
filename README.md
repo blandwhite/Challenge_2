@@ -78,7 +78,8 @@ pip install questionary
 
 *After the addition of a new save_csv function, the user now has the ability to save a list of qualifying loans, such as this:*
 
-![Saved loans](https://github.com/blandwhite/Challenge_2/blob/main/images/02_saved_loans.png)
+![Saved loans](https://github.com/blandwhite/Challenge_2/blob/main/images/02_saved_loans.PNG)
+
 ---
 
 ## Contributors
