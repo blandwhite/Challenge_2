@@ -11,6 +11,7 @@ import sys
 import fire
 import questionary
 from pathlib import Path
+import pandas as pd
 
 from qualifier.utils.fileio import load_csv
 from qualifier.utils.fileio import save_csv
@@ -99,7 +100,15 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     bank_data_filtered = filter_debt_to_income(monthly_debt_ratio, bank_data_filtered)
     bank_data_filtered = filter_loan_to_value(loan_to_value_ratio, bank_data_filtered)
 
-    print(f"Found {len(bank_data_filtered)} qualifying loans")
+    print(f"Found {len(bank_data_filtered)} qualifying loans \n")
+
+    # Output a dataframe of the qualifying lenders to the screen
+    filtered_df = pd.DataFrame(bank_data_filtered,columns=["Lender","Max Loan Amt","Max LTV","Max DTI","Min Credit Score","Rate"])
+    # replace the index numbers with Lender column as the index
+    filtered_df_lender = filtered_df.set_index("Lender")
+    print("Here's a look at qualifying lenders: \n")
+    print(filtered_df_lender, "\n")
+
 
     # If there are no qualifying loans, allows user to retry with different answers or exit the app.
     if len(bank_data_filtered) == 0:
